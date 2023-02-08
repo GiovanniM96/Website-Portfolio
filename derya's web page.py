@@ -13,11 +13,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html", name="Derya Oruç")
+    return render_template("index.html")
 
 @app.route("/about")
 def about():
-    return render_template("about.html", name="Derya Oruç")
+    return render_template("about.html")
 
 @app.route("/projects")
 def projects():
@@ -35,7 +35,7 @@ def projects():
             "description": "Description for project 2"
         }
     ]
-    return render_template("projects.html", projects=projects, name="Derya Oruç")
+    return render_template("projects.html", projects=projects)
 
 if __name__ == "__main__":
     app.run(debug=True)
